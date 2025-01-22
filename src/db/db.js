@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 const dbconnect = ()=>{
-    mongoose.connect("mongodb://0.0.0.0/challenge-insta")
+    mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
         console.log("connected to the database")
     })
